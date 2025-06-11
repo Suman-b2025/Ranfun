@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/styles.css">
+     <style>
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+        /* Professional Navbar Styles */
+        nav {
+            background: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            background: #ff9800;
+            color: #222;
+        }
+        header h1 {
+            text-align: center;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 2.2rem;
+            color: #222;
+            letter-spacing: 1px;
+        }
+        .recommended-products {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1rem;
+            text-align: center;
+            width: 220px;
+        }
+        .product-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin: 0.5rem 0 0.3rem 0;
+        }
+        .product-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sunset Reunion</h1>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/product">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        Experience the Magic of Sunsets with Us!
+    </div>
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Welcome to Sunset Reunion, where every journey feels like coming home — just in a different part of the world. 🌅✨
+
+We specialize in crafting soulful escapes that bring people closer — whether it's a long-awaited family vacation, a friends’ reunion by the beach, or a romantic getaway under golden skies. With handpicked destinations, seamless planning, and heartfelt touches, we turn ordinary trips into extraordinary memories.
+
+Because at Sunset Reunion, we believe the best stories begin where the sun meets the horizon — together.</p>
+        </section>
+        <section>
+            <h2>Recommended Products</h2>
+            <div class="recommended-products">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Sunset Lamp">
+                    <h3>Purulia Paradise </h3>
+                    <p>Where rugged beauty meets tribal rhythm — adventure with a heartbeat. 🏞️</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Beach Canvas">
+                    <h3>Mandarmani Beach Canvas</h3>
+                    <p>Feel the breeze, chase the waves, and unwind where the sky meets the sea. 🌊</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="Sunset Mug">
+                    <h3>Ghatsila Leisure </h3>
+                    <p>A quiet riverside retreat wrapped in forested hills and golden memories. 🌿</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Our Company</p>
+    </footer>
+</body>
+</html>
