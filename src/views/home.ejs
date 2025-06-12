@@ -9,7 +9,7 @@
         .banner {
             width: 100%;
             height: 300px;
-            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: url('/images/banner.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -61,7 +61,29 @@
             justify-content: center;
             margin-top: 2rem;
         }
+
+        /* Marquee slider styles */
+    .marquee-container {
+        overflow: hidden;
+        width: 100%;
+        background: #f8f8f8;
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+    .marquee-slider {
+        display: flex;
+        gap: 2rem;
+        animation: marquee 18s linear infinite;
+        width: max-content;
+    }
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
         .product-card {
+             min-width: 220px;
+        max-width: 220px;
+        flex: 0 0 220px;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -90,46 +112,84 @@
         <nav>
             <ul>
                 <li><a href="/" class="active">Home</a></li>
+                <li><a href="/product">Services</a></li>
                 <li><a href="/contact">Contact Us</a></li>
-                <li><a href="/product">Products</a></li>
             </ul>
         </nav>
     </header>
     <div class="banner">
-        Experience the Magic of Sunsets with Us!
+       
     </div>
     <main>
         <section>
             <h2>About Us</h2>
-            <p>Welcome to Sunset Reunion, where every journey feels like coming home — just in a different part of the world. 🌅✨
+            <p>Welcome to Sunset Reunion, where every journey feels like coming home — just in a different part of the world.
 
 We specialize in crafting soulful escapes that bring people closer — whether it's a long-awaited family vacation, a friends’ reunion by the beach, or a romantic getaway under golden skies. With handpicked destinations, seamless planning, and heartfelt touches, we turn ordinary trips into extraordinary memories.
 
 Because at Sunset Reunion, we believe the best stories begin where the sun meets the horizon — together.</p>
         </section>
-        <section>
-            <h2>Recommended Tours</h2>
-            <div class="recommended-products">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Sunset Lamp">
-                    <h3>Purulia Paradise </h3>
-                    <p>Where rugged beauty meets tribal rhythm — adventure with a heartbeat. 🏞️</p>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Beach Canvas">
-                    <h3>Mandarmani Beach Canvas</h3>
-                    <p>Feel the breeze, chase the waves, and unwind where the sky meets the sea. 🌊</p>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="Sunset Mug">
-                    <h3>Ghatsila Leisure </h3>
-                    <p>A quiet riverside retreat wrapped in forested hills and golden memories. 🌿</p>
-                </div>
+       <section>
+    <h2>Recommended Tours</h2>
+    <div class="marquee-container">
+        <div class="marquee-slider">
+            <div class="product-card">
+                <img src="/images/purulia.jpg" alt="Purulia Paradise">
+                <h3>Purulia Paradise </h3>
+                <p>Where rugged beauty meets tribal rhythm — adventure with a heartbeat.</p>
             </div>
-        </section>
+            <div class="product-card">
+                <img src="/images/mandarmoni.png" alt="Mandarmoni Beach">
+                <h3>Mandarmani Beach</h3>
+                <p>Feel the breeze, chase the waves, and unwind where the sky meets the sea.</p>
+            </div>
+            <div class="product-card">
+                <img src="/images/ghatsila.jpg" alt="Ghatsila Leisure">
+                <h3>Ghatsila Leisure </h3>
+                <p>A quiet riverside retreat wrapped in forested hills and golden memories.</p>
+            </div>
+            <div class="product-card">
+                <img src="/images/darjeeling.jpg" alt="Dashing  Darjeeling">
+                <h3>Dashing Darjeeling </h3>
+                <p>Where the mist kisses the mountains and tea brews with charm.</p>
+            </div>
+            <!-- Duplicate cards for seamless loop -->
+            <div class="product-card">
+                <img src="/images/shantiniketan.jpg" alt="Shantiniketan">
+                <h3>Shantiniketan</h3>
+                <p>Where rugged beauty meets tribal rhythm — adventure with a heartbeat.</p>
+            </div>
+            <div class="product-card">
+                <img src="/images/ravangla.jpg" alt="ravangla">
+                <h3>Ravangla</h3>
+                <p>Feel the breeze, chase the waves, and unwind where the sky meets the sea.</p>
+            </div>
+            <div class="product-card">
+                <img src="/images/bhutan.jpg" alt="bhutan">
+                <h3>Bhutan</h3>
+                <p>A quiet riverside retreat wrapped in forested hills and golden memories.</p>
+            </div>
+            <div class="product-card">
+                <img src="/images/mauritius.jpg" alt="mauritius">
+                <h3>Mauritius</h3>
+                <p>Where the mist kisses the mountains and tea brews with charm.</p>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
-    <footer>
-        <p>&copy; 2025 Our Company</p>
+   <footer style="background:#222; color:#fff; padding:1.5rem 0 1rem 0; text-align:center; margin-top:2rem;">
+        <div style="max-width:900px; margin:0 auto;">
+            <div style="font-size:1.1rem; margin-bottom:0.5rem;">
+                <strong>Sunset Reunion</strong> &mdash; Crafting Memories, One Journey at a Time
+            </div>
+            <div style="font-size:0.98rem; margin-bottom:0.5rem;">
+                <span style="font-weight:500;">Address:</span> Dumurjola Stadium
+            </div>
+            <div style="font-size:0.95rem; color:#bbb;">
+                &copy; 2025 Sunset Reunion. All rights reserved.
+            </div>
+        </div>
     </footer>
 </body>
 </html>
