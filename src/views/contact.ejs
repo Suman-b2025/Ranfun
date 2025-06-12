@@ -3,21 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us - Sunset Reunion</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            background: #f5f7fa;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 2.5rem auto 2rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .contact-container h2 {
+            text-align: center;
+            color: #ff9800;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f9f9f9;
+            transition: border 0.2s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 1.5px solid #ff9800;
+            outline: none;
+            background: #fff;
+        }
+        .contact-form button {
+            background: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2.2rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .contact-form button:hover {
+            background: #e68900;
+        }
+        .contact-info {
+            margin-top: 2.5rem;
+            text-align: center;
+            color: #444;
+        }
+        .contact-info h3 {
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info p {
+            margin: 0.2rem 0;
+            font-size: 1.02rem;
+        }
+        @media (max-width: 700px) {
+            .contact-container {
+                padding: 1.2rem 0.5rem;
+            }
+        }
+        /* Keep header/footer/menu styles consistent */
+        nav {
+            background: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            background: #ff9800;
+            color: #222;
+        }
+        header h1 {
+            text-align: center;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 2.2rem;
+            color: #222;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact Us</h1>
-    <form action="/contact" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send</button>
-    </form>
+    <header>
+        <h1>Welcome to Sunset Reunion</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/contact" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form class="contact-form" method="POST" action="/contact">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <h3>Our Office</h3>
+            <p><strong>Address:</strong> Dumurjola Stadium</p>
+            <p><strong>Email:</strong> tbd@gmail.com</p>
+            <p><strong>Phone:</strong> +91 9038462123</p>
+        </div>
+    </div>
+    <footer style="background:#222; color:#fff; padding:1.5rem 0 1rem 0; text-align:center; margin-top:2rem;">
+        <div style="max-width:900px; margin:0 auto;">
+            <div style="font-size:1.1rem; margin-bottom:0.5rem;">
+                <strong>Sunset Reunion</strong> &mdash; Crafting Memories, One Journey at a Time
+            </div>
+            <div style="font-size:0.98rem; margin-bottom:0.5rem;">
+                <span style="font-weight:500;">Address:</span> Dumurjola Stadium
+            </div>
+            <div style="font-size:0.95rem; color:#bbb;">
+                &copy; 2025 Sunset Reunion. All rights reserved.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
